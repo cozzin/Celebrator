@@ -10,6 +10,10 @@
 		C12A873422F5CA8200AACBDF /* Celebrator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12A872A22F5CA8200AACBDF /* Celebrator.framework */; };
 		C12A873922F5CA8200AACBDF /* CelebratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A873822F5CA8200AACBDF /* CelebratorTests.swift */; };
 		C12A873B22F5CA8200AACBDF /* Celebrator.h in Headers */ = {isa = PBXBuildFile; fileRef = C12A872D22F5CA8200AACBDF /* Celebrator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C12A874522F5CA9B00AACBDF /* Celebrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A874422F5CA9B00AACBDF /* Celebrator.swift */; };
+		C12A874722F5CAE000AACBDF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A874622F5CAE000AACBDF /* Event.swift */; };
+		C12A874A22F5D5CC00AACBDF /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A874922F5D5CC00AACBDF /* EventRepository.swift */; };
+		C12A874C22F5D5E300AACBDF /* EventRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A874B22F5D5E300AACBDF /* EventRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		C12A873322F5CA8200AACBDF /* CelebratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CelebratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12A873822F5CA8200AACBDF /* CelebratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebratorTests.swift; sourceTree = "<group>"; };
 		C12A873A22F5CA8200AACBDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C12A874422F5CA9B00AACBDF /* Celebrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Celebrator.swift; sourceTree = "<group>"; };
+		C12A874622F5CAE000AACBDF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C12A874922F5D5CC00AACBDF /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		C12A874B22F5D5E300AACBDF /* EventRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		C12A872C22F5CA8200AACBDF /* Celebrator */ = {
 			isa = PBXGroup;
 			children = (
+				C12A874822F5CAF900AACBDF /* Source */,
 				C12A872D22F5CA8200AACBDF /* Celebrator.h */,
 				C12A872E22F5CA8200AACBDF /* Info.plist */,
 			);
@@ -84,6 +93,17 @@
 				C12A873A22F5CA8200AACBDF /* Info.plist */,
 			);
 			path = CelebratorTests;
+			sourceTree = "<group>";
+		};
+		C12A874822F5CAF900AACBDF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C12A874422F5CA9B00AACBDF /* Celebrator.swift */,
+				C12A874622F5CAE000AACBDF /* Event.swift */,
+				C12A874922F5D5CC00AACBDF /* EventRepository.swift */,
+				C12A874B22F5D5E300AACBDF /* EventRecorder.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					C12A872922F5CA8200AACBDF = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					C12A873222F5CA8200AACBDF = {
 						CreatedOnToolsVersion = 10.3;
@@ -194,6 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12A874722F5CAE000AACBDF /* Event.swift in Sources */,
+				C12A874A22F5D5CC00AACBDF /* EventRepository.swift in Sources */,
+				C12A874C22F5D5E300AACBDF /* EventRecorder.swift in Sources */,
+				C12A874522F5CA9B00AACBDF /* Celebrator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +366,7 @@
 		C12A873F22F5CA8200AACBDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cozzin.Celebrator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +392,7 @@
 		C12A874022F5CA8200AACBDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +417,7 @@
 		C12A874222F5CA8200AACBDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CelebratorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +435,7 @@
 		C12A874322F5CA8200AACBDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CelebratorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
